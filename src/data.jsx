@@ -6,15 +6,17 @@ import {
   FaBriefcase,
   FaGraduationCap,
   FaCode,
+  FaLinkedin,
+  FaLinkedinIn,
 } from 'react-icons/fa';
 import { FiFileText, FiUser, FiExternalLink } from 'react-icons/fi';
 
-import Work1 from './assets/project-1.jpeg';
-import Work2 from './assets/project-2.jpg';
-import Work3 from './assets/project-3.jpeg';
-import Work4 from './assets/project-4.jpeg';
-import Work5 from './assets/project-5.jpg';
-import Work6 from './assets/project-6.jpg';
+import Work1 from './assets/project-1-min.jpg';
+import Work2 from './assets/project-2-min.jpg';
+import Work3 from './assets/project-3-min.jpg';
+import Work4 from './assets/project-4-min.jpg';
+import Work5 from './assets/project-5-min.jpg';
+import Work6 from './assets/project-6-min.jpg';
 
 import Theme1 from './assets/purple.png';
 import Theme2 from './assets/red.png';
@@ -73,7 +75,7 @@ export const personalInfo = [
   {
     id: 3,
     title: 'Age : ',
-    description: '20 Years',
+    description: '21 Years',
   },
 
   {
@@ -108,8 +110,8 @@ export const personalInfo = [
 
   {
     id: 9,
-    title: 'Skype : ',
-    description: 'live:.cid.f49b10da983fe22',
+    title: 'LinkedIn : ',
+    description: <a href='https://www.linkedin.com/in/ankit-khan-3689b5247' target='_blank'> Ankit Khan</a>,
   },
 
   {
@@ -170,43 +172,43 @@ export const skills = [
   {
     id: 1,
     title: 'Html',
-    percentage: '95',
+    percentage: '90',
   },
 
   {
     id: 2,
     title: 'Javascript',
-    percentage: '70',
+    percentage: '80',
   },
 
   {
     id: 3,
     title: 'Css',
-    percentage: '75',
+    percentage: '85',
   },
 
   {
     id: 4,
     title: 'React JS',
-    percentage: '60',
+    percentage: '75',
   },
 
   {
     id: 5,
     title: 'Express JS',
-    percentage: '60',
+    percentage: '40',
   },
 
   {
     id: 6,
     title: 'C++',
-    percentage: '50',
+    percentage: '65',
   },
 
   {
     id: 7,
     title: 'Java',
-    percentage: '65',
+    percentage: '45',
   },
 
   {
@@ -217,6 +219,32 @@ export const skills = [
 ];
 
 export const portfolio = [
+  {
+    id: 5,
+    img: Work5,
+    title: 'Chrome Extension',
+    details: [
+      {
+        icon: <FiFileText />,
+        title: 'Project : ',
+        desc: 'ChatBot',
+      },
+      // {
+      //   title: 'Client : ',
+      //   desc: 'Dribble',
+      // },
+      {
+        icon: <FaCode />,
+        title: 'Language : ',
+        desc: 'MERN',
+      },
+      {
+        icon: <FiExternalLink />,
+        // title: 'Preview : ',
+        desc: <a href="https://github.com/Ankitkhan08/chrome-Extension" target="_blank">Visit the  Repo</a>,
+      },
+    ],
+  },
   {
     id: 1,
     img: Work1,
@@ -239,8 +267,8 @@ export const portfolio = [
       },
       {
         icon: <FiExternalLink />,
-        title: 'Preview : ',
-        desc: <a>https://homyz.pages.dev/</a>,
+        // title: 'Preview : ',
+        desc: <a href='https://github.com/Ankitkhan08/real-estate' target="_blank">Visit the  Repo</a>,
       },
     ],
   },
@@ -248,18 +276,18 @@ export const portfolio = [
   {
     id: 2,
     img: Work2,
-    title: 'Website Design',
+    title: 'Text Manager',
     details: [
       {
         icon: <FiFileText />,
-        title: 'Project : ',
-        desc: 'Website',
+        // title: 'Project : ',
+        desc: 'Text Manager',
       },
-      {
-        icon: <FiUser />,
-        title: 'Client : ',
-        desc: 'Dribble',
-      },
+      // {
+      //   icon: <FiUser />,
+      //   title: 'Client : ',
+      //   desc: 'Dribble',
+      // },
       {
         icon: <FaCode />,
         title: 'Language : ',
@@ -267,8 +295,8 @@ export const portfolio = [
       },
       {
         icon: <FiExternalLink />,
-        title: 'Preview : ',
-        desc: 'www.dribble.com',
+        // title: 'Preview : ',
+        desc: <a href='https://github.com/Ankitkhan08/text-manager' target="_blank" > Visit the  Repo</a>,
       },
     ],
   },
@@ -276,27 +304,27 @@ export const portfolio = [
   {
     id: 3,
     img: Work3,
-    title: 'Video Editing',
+    title: 'NewsHub',
     details: [
       {
         icon: <FiFileText />,
         title: 'Project : ',
-        desc: 'Video',
+        desc: 'NewsHub',
       },
-      {
-        icon: <FiUser />,
-        title: 'Client : ',
-        desc: 'Dribble',
-      },
+      // {
+      //   icon: <FiUser />,
+      //   title: 'Client : ',
+      //   desc: 'Dribble',
+      // },
       {
         icon: <FaCode />,
         title: 'Language : ',
-        desc: 'Adobe Premium',
+        desc: 'React JS',
       },
       {
         icon: <FiExternalLink />,
-        title: 'Preview : ',
-        desc: 'www.dribble.com',
+        // title: 'Preview : '
+        desc: <a href='https://github.com/Ankitkhan08/newshub' target="_blank"> Visit the  Repo</a>,
       },
     ],
   },
@@ -304,79 +332,57 @@ export const portfolio = [
   {
     id: 4,
     img: Work4,
-    title: 'Video Editing',
+    title: 'CryptoVerse',
     details: [
       {
         icon: <FiFileText />,
         title: 'Project : ',
-        desc: 'Video',
+        desc: 'CrytoVerse',
       },
-      {
-        icon: <FiUser />,
-        title: 'Client : ',
-        desc: 'Dribble',
-      },
+      // {
+      //   icon: <FiUser />,
+      //   title: 'Client : ',
+      //   desc: 'Dribble',
+      // },
       {
         icon: <FaCode />,
         title: 'Language : ',
-        desc: 'Adobe Premium',
+        desc: 'React JS',
       },
       {
         icon: <FiExternalLink />,
-        title: 'Preview : ',
-        desc: 'www.dribble.com',
+        // title: 'Preview : ',
+        desc: <a href='https://github.com/Ankitkhan08/cryptoverse'  target="_blank" > Visit the  Repo</a>,
       },
     ],
   },
 
-  {
-    id: 5,
-    img: Work5,
-    title: 'Landing Page',
-    details: [
-      {
-        title: 'Project : ',
-        desc: 'Website',
-      },
-      {
-        title: 'Client : ',
-        desc: 'Dribble',
-      },
-      {
-        title: 'Language : ',
-        desc: 'React JS, Node JS',
-      },
-      {
-        title: 'Preview : ',
-        desc: 'www.dribble.com',
-      },
-    ],
-  },
+  
 
   {
     id: 6,
     img: Work6,
-    title: 'Photo Editing',
+    title: 'Weather Site',
     details: [
       {
         icon: <FiFileText />,
         title: 'Project : ',
-        desc: 'Photo',
+        desc: 'Weather website',
       },
-      {
-        icon: <FiUser />,
-        title: 'Client : ',
-        desc: 'Dribble',
-      },
+      // {
+      //   icon: <FiUser />,
+      //   title: 'Client : ',
+      //   desc: 'Dribble',
+      // },
       {
         icon: <FaCode />,
         title: 'Language : ',
-        desc: 'Adobe Photoshop',
+        desc: 'Node JS, React JS',
       },
       {
         icon: <FiExternalLink />,
-        title: 'Preview : ',
-        desc: 'www.dibble.com',
+        // title: 'Preview : ',
+        desc: <a href='https://github.com/Ankitkhan08/weather-app-nodejs'target="_blank">Visit the  Repo</a>,
       },
     ],
   },

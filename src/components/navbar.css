@@ -145,3 +145,10 @@
         color: var(--text-white);
     }
 }
+@media (max-width: 480px) {
+    .nav__toggle {
+      display: block;
+      right: 15px;
+    }
+  }
+  
