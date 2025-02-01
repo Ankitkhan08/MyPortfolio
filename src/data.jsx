@@ -227,7 +227,7 @@ export const portfolio = [
       {
         icon: <FiFileText />,
         title: 'Project : ',
-        desc: 'ChatBot',
+        desc: 'Chrome Extension',
       },
       // {
       //   title: 'Client : ',
