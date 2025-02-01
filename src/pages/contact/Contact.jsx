@@ -1,5 +1,5 @@
-import React, { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
+import { useRef, useState } from "react";
+import * as emailjs from "@emailjs/browser";
 import { FiSend } from "react-icons/fi";
 import "./contact.css";
 import Noty from 'noty'; // Import Noty library
