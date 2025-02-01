@@ -30,6 +30,7 @@ const Themes = () => {
 
   const changeColor = (color) => {
     setColor(color);
+    setShowSwitcher(false);
   }
 
 const toggleTheme = () => {
@@ -49,6 +50,17 @@ const toggleTheme = () => {
     document.documentElement.className = theme;
     localStorage.setItem('theme', theme);
   }, [theme])
+
+    /* Section: Add setTimeout to reset showSwitcher */
+    useEffect(() => {
+      let timeoutId;
+      if (showSwitcher) {
+        timeoutId = setTimeout(() => {
+          setShowSwitcher(false);
+        }, 3000); // Reset showSwitcher after 3 seconds
+      }
+      return () => clearTimeout(timeoutId); // Clear the timer if component unmounts or showSwitcher changes
+    }, [showSwitcher]);
 
   return (
     <div>
