@@ -1,5 +1,4 @@
-import { useRef, useState } from "react";
-import * as emailjs from "@emailjs/browser";
+import { useRef, useState, useEffect } from "react";
 import { FiSend } from "react-icons/fi";
 import "./contact.css";
 import Noty from 'noty'; // Import Noty library
@@ -14,6 +13,11 @@ import {
   FaGithub,
 } from "react-icons/fa";
 
+let emailjs;
+
+
+  
+
 const Contact = () => {
   const form = useRef();
   const [messageSent, setMessageSent] = useState(false);
@@ -23,6 +27,12 @@ const Contact = () => {
     subject: "",
     message: "",
   });
+
+  useEffect(() => {
+    import("@emailjs/browser").then((module) => {
+      emailjs = module.default;
+    });
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
